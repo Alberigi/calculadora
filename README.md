@@ -1,7 +1,6 @@
 <h1 align="center">
   Calculadora
 </h1>
-![image](https://user-images.githubusercontent.com/87280077/202721536-0fd0097f-c6e7-48d4-9356-ae33a2bb934e.png)
 
 ## :rocket: Technology
 
