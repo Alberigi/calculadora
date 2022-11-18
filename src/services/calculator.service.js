@@ -39,13 +39,18 @@ export class CalculatorService {
     let previous = +this.previousOparetionValue.innerText.split(" ")[0];
     let current = +this.currentOparetionValue.innerText;
 
-    this.processOperation(operation, operationValue, previous, current);
+    return this.processOperation(operation, operationValue, previous, current);
   }
 
   processOperation(operation, operationValue, previous, current) {
     if (this.mathOperationList.includes(operation)) {
       operationValue = this.mathOperationHandlers[operation](previous, current);
-      this.handlerUpdateValues(operationValue, operation, previous, current);
+      return this.handlerUpdateValues(
+        operationValue,
+        operation,
+        previous,
+        current
+      );
     } else if (this.calcOperationList.includes(operation)) {
       this.calcOperationHandlers(operation);
     }
@@ -54,17 +59,13 @@ export class CalculatorService {
   calcOperationHandlers(operation) {
     switch (operation) {
       case "DEL":
-        this.deleteOperation();
-        break;
+        return this.deleteOperation();
       case "CE":
-        this.clearCurrentOperation();
-        break;
+        return this.clearCurrentOperation();
       case "C":
-        this.clearAllOperation();
-        break;
+        return this.clearAllOperation();
       case "=":
-        this.resultOperation();
-        break;
+        return this.resultOperation();
       default:
         break;
     }
@@ -94,8 +95,8 @@ export class CalculatorService {
       if (previous === 0) {
         operationValue = current;
       }
-      this.previousOparetionValue.innerText = `${operationValue} ${operation}`;
       this.currentOparetionValue.innerText = "";
+      return (this.previousOparetionValue.innerText = `${operationValue} ${operation}`);
     }
   }
 
@@ -112,21 +113,26 @@ export class CalculatorService {
   }
 
   deleteOperation() {
-    this.currentOparetionValue.innerText =
-      this.currentOparetionValue.innerText.slice(0, -1);
+    return (this.currentOparetionValue.innerText =
+      this.currentOparetionValue.innerText.slice(0, -1));
   }
 
   clearCurrentOperation() {
-    this.currentOparetionValue.innerText = "";
+    return (this.currentOparetionValue.innerText = "");
   }
 
   clearAllOperation() {
     this.currentOparetionValue.innerText = "";
     this.previousOparetionValue.innerText = "";
+
+    return {
+      current: this.currentOparetionValue.innerText,
+      previous: this.previousOparetionValue.innerText,
+    };
   }
 
   resultOperation() {
     const operation = this.previousOparetionValue.innerText.split(" ")[1];
-    this.handlerOperation(operation);
+    return this.handlerOperation(operation);
   }
 }
