@@ -4,8 +4,8 @@ export class CalculatorService {
   mathOperationHandlers = {
     "+": (previous, current) => previous + current,
     "-": (previous, current) => previous - current,
-    "/": (previous, current) => previous / current,
-    "*": (previous, current) => previous * current,
+    "/": (previous, current) => this.subOperation(previous, current),
+    "*": (previous, current) => this.multiOperation(previous, current),
   };
 
   constructor(previousOparetionValue, currentOparetionValue) {
@@ -78,7 +78,10 @@ export class CalculatorService {
   }
 
   handlerAddValue(value) {
-    if (value !== "." && !this.currentOparetionValue.innerText.includes(".")) {
+    if (
+      value !== "." ||
+      (value === "." && !this.currentOparetionValue.innerText.includes("."))
+    ) {
       this.currentValue = value;
       this.handlerUpdateValues();
     }
@@ -94,6 +97,18 @@ export class CalculatorService {
       this.previousOparetionValue.innerText = `${operationValue} ${operation}`;
       this.currentOparetionValue.innerText = "";
     }
+  }
+
+  subOperation(previous, current) {
+    if (previous === 0) return current;
+    if (current === 0) return previous;
+    return previous / current;
+  }
+
+  multiOperation(previous, current) {
+    if (previous === 0) return current;
+    if (current === 0) return previous;
+    return previous * current;
   }
 
   deleteOperation() {
