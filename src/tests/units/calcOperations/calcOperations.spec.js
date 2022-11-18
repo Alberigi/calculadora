@@ -42,4 +42,15 @@ describe("CalcOperations", () => {
     const result = calculatorService.calcOperationHandlers("=");
     expect(result).to.be.equal("200 +");
   });
+
+  it("should perform the mathematical operation", () => {
+    calculatorService.currentOparetionValue = {
+      innerText: "100",
+    };
+    calculatorService.previousOparetionValue = {
+      innerText: "100 +",
+    };
+    const result = calculatorService.calcOperationHandlers("[");
+    expect(result).to.be.undefined;
+  });
 });

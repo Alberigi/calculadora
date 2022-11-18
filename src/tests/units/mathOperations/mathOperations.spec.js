@@ -35,12 +35,12 @@ describe("MathOperations", () => {
   });
 
   it("should not multiply two values, with the current zero", () => {
-    const result = calculatorService.mathOperationHandlers["/"](4, 0);
+    const result = calculatorService.mathOperationHandlers["*"](4, 0);
     expect(result).to.be.equal(4);
   });
 
   it("should not multiply two values, with the previous zero", () => {
-    const result = calculatorService.mathOperationHandlers["/"](0, 4);
+    const result = calculatorService.mathOperationHandlers["*"](0, 4);
     expect(result).to.be.equal(4);
   });
 });
