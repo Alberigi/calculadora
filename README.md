@@ -13,19 +13,24 @@ This project was developed with the following technologies:
 
 ## 💻 About this Project
 
-A Calculator in HTML, CSS and JavaScript Vanilla, with basic math operations.
+A Calculator in HTML, CSS and JavaScript Vanilla, with basic math operations, and test coverage with vitest.
 
 ## Getting Started
   
 ### Run application
 
+- `nvm use` // to use a version 18.12.1 of Node.js
 - `npm install`
 - `npm run dev`
 
+## Run test 
+- `npm run test`
+- `npm run coverage`
+
 ## Pending features
 
-- [ ] e2e tests
-- [ ] unit tests
+- [X] e2e tests
+- [X] unit tests
 - [ ] change to scss
 - [ ] eslint configuration
 
