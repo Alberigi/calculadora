@@ -19,7 +19,7 @@ A Calculator in HTML, CSS and JavaScript Vanilla, with basic math operations, an
   
 ### Run application
 
-- `nvm use` // to use a version 18.12.1 of Node.js
+- `nvm use` to use a version 18.12.1 of Node.js
 - `npm install`
 - `npm run dev`
 
