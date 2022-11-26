@@ -11,43 +11,42 @@ body {
   align-items: center;
   justify-content: center;
   padding: 3em;
-}
 
-#app {
-  width: 400px;
-  padding: 1em;
-  background-color: #372447;
-  color: #81d8f7;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-}
+  #app {
+    width: 400px;
+    padding: 1em;
+    background-color: #372447;
+    color: #81d8f7;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 
-#preview {
-  text-align: right;
-  min-height: 6em;
-}
+    #preview {
+      text-align: right;
+      min-height: 6em;
 
-#previousValues,
-#currentValues {
-  min-height: 1.6em;
-  padding: 0.2em;
-  overflow-wrap: break-word;
-}
+      #previousValues,
+      #currentValues {
+        min-height: 1.6em;
+        padding: 0.2em;
+        overflow-wrap: break-word;
+      }
+      #previousValues {
+        color: #81d8f7;
+      }
+      
+      #currentValues {
+        font-size: 3em;
+        font-weight: 700;
+      }
+    }
 
-#previousValues {
-  color: #81d8f7;
-}
-
-#currentValues {
-  font-size: 3em;
-  font-weight: 700;
-}
-
-#buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 3px;
+  }
+  #buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+  }
 }
 
 #buttons button {
