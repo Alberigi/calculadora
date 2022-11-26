@@ -8,7 +8,7 @@ This project was developed with the following technologies:
 
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [SASS](https://sass-lang.com/)
 - [Vite](https://vitejs.dev/guide/)
 
 ## 💻 About this Project
@@ -31,8 +31,7 @@ A Calculator in HTML, CSS and JavaScript Vanilla, with basic math operations, an
 
 - [X] e2e tests
 - [X] unit tests
-- [ ] change to scss
-- [ ] eslint configuration
+- [ ] change to scass
 
 ---
 
