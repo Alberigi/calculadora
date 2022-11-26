@@ -2,6 +2,8 @@
   Calculadora
 </h1>
 
+![image](./public/calculator.png)
+
 ## :rocket: Technology
 
 This project was developed with the following technologies:
@@ -31,7 +33,7 @@ A Calculator in HTML, CSS and JavaScript Vanilla, with basic math operations, an
 
 - [X] e2e tests
 - [X] unit tests
-- [ ] change to scass
+- [X] change to scass
 
 ---
 
